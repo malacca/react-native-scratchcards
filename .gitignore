@@ -1,0 +1,13 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+.phpunit.result.cache
+.gradle
+.project
+.settings
+
+# Thumbnails
+._*
+package-lock.json
+dist
+node_modules
