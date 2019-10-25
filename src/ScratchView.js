@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {StyleSheet, Animated, requireNativeComponent, Image} from 'react-native';
-const RNTScratchView = requireNativeComponent('RNTScratchView', ScratchView);
+const RNTScratchView = requireNativeComponent('RNTScratchCards', ScratchView);
 const AnimatedScratchView = RNTScratchView && Animated.createAnimatedComponent(RNTScratchView);
 
 class ScratchView extends Component {

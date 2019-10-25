@@ -2,11 +2,11 @@
 原始代码来自于 [react-native-scratch](https://github.com/ConduitMobileRND/react-native-scratch)，由于进行了魔改，有 breaking change，所以就没有 fork 原代码
 
 
-# react-native-scratchcard
+# react-native-scratchcards
 
 ## install
 
-`yarn add react-native-scratchcard`
+`yarn add react-native-scratchcards`
 
 
 #### Android
@@ -24,7 +24,7 @@
 ```javascript
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import ScratchView from 'react-native-scratchcard'
+import ScratchView from 'react-native-scratchcards'
 
 class MyView extends Component {
 

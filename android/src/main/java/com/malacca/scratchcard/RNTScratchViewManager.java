@@ -12,7 +12,7 @@ import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
 public class RNTScratchViewManager extends SimpleViewManager<ScratchView> {
-    public static final String REACT_CLASS = "RNTScratchView";
+    public static final String REACT_CLASS = "RNTScratchCards";
     public static final String EVENT_IMAGE_LOAD = "onImageLoadFinished";
     public static final String EVENT_TOUCH_STATE_CHANGED = "onTouchStateChanged";
     public static final String EVENT_SCRATCH_PROGRESS_CHANGED = "onScratchProgressChanged";
