@@ -110,17 +110,13 @@ public class RNTScratchViewManager extends SimpleViewManager<ScratchView> {
         }
     }
 
-    public @Nullable Map getExportedCustomBubblingEventTypeConstants() {
-        return MapBuilder.builder()
-                .put(EVENT_IMAGE_LOAD,
-                        MapBuilder.of("phasedRegistrationNames", MapBuilder.of("bubbled", EVENT_IMAGE_LOAD)))
-                .put(EVENT_TOUCH_STATE_CHANGED,
-                        MapBuilder.of("phasedRegistrationNames", MapBuilder.of("bubbled", EVENT_TOUCH_STATE_CHANGED)))
-                .put(EVENT_SCRATCH_PROGRESS_CHANGED,
-                    MapBuilder.of("phasedRegistrationNames",
-                        MapBuilder.of("bubbled", EVENT_SCRATCH_PROGRESS_CHANGED)))
-                .put(EVENT_SCRATCH_DONE,
-                        MapBuilder.of("phasedRegistrationNames", MapBuilder.of("bubbled", EVENT_SCRATCH_DONE)))
+    @Override
+    public @Nullable Map<String, Object> getExportedCustomBubblingEventTypeConstants() {
+        return MapBuilder.<String, Object>builder()
+                .put(EVENT_IMAGE_LOAD, MapBuilder.of("registrationName", EVENT_IMAGE_LOAD))
+                .put(EVENT_TOUCH_STATE_CHANGED, MapBuilder.of("registrationName", EVENT_TOUCH_STATE_CHANGED))
+                .put(EVENT_SCRATCH_PROGRESS_CHANGED, MapBuilder.of("registrationName", EVENT_SCRATCH_PROGRESS_CHANGED))
+                .put(EVENT_SCRATCH_DONE, MapBuilder.of("registrationName", EVENT_SCRATCH_DONE))
                 .build();
     }
 }
