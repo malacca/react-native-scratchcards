@@ -21,7 +21,7 @@
 
 ## Usage
 
-```javascript
+```js
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import ScratchView from 'react-native-scratchcards'
@@ -43,9 +43,6 @@ class MyView extends Component {
 		<ComponentA> // 刮刮卡覆盖的组件，刮开后显示的就是他了
 
 		<ScratchView
-			// 卡片ID(可选)
-			id="string"
-
 			// 笔触宽度
 			brushSize={10} 
 
@@ -69,19 +66,30 @@ class MyView extends Component {
 			// 图片 mode 与 react image 组件类似
 			resizeMode="contain|cover|stretch|center|repeat" 
 
-			// 图片加载成功的回调
-			onImageLoadFinished={this.onImageLoadFinished}
+			// 开始载入 (此时可能还没载入完成)
+			onInit={Callback}
 
-			// touch start/end 的回调
-			onTouchStateChanged={this.onTouchStateChangedMethod}
+			// 若设置了背景图, 背景图加载 成功/失败 回调
+			onImageLoad={Callback}
+			onImageError={Callback}
 
-			// 刮开比例发生变化时 的 回调
-			onScratchProgressChanged={this.onScratchProgressChanged}
-
-			// 达到有效刮开比例时 的 回调
-			onScratchDone={this.onScratchDone}
+			// 刮开触摸 开始/结束 回调
+			onTouchStart={Callback}
+			onTouchEnd={Callback}
+			
+			// 当前刮开比例 (该值并不及时, 仅做参考)
+			onProgress={Callback}
+			
+			// 当刮开比例达到 threshold 设定值时回调
+			onDone={Callback}
 		/>
 	  </View>)
 }
 export default MyView;
 ```
+
+额外说明：
+
+1. 考虑到计算性能, 组件尺寸 和 围栏设置(fence) 只处理一次, 后续修改无效。
+	若必须修改，重新创建组件
+2. 其他属性可进行更新	
