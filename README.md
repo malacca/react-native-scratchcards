@@ -28,15 +28,6 @@ import ScratchView from 'react-native-scratchcards'
 
 class MyView extends Component {
 
-	onImageLoadFinished = ({ id, success }) => {
-	}
-	onScratchProgressChanged = ({ value, id }) => {
-	}
-	onScratchDone = ({ isScratchDone, id }) => {
-	}
-	onScratchTouchStateChanged = ({ id, touchState }) => {
-	}
-
 	render() {
 	  return (<View style={{ width: 300, height: 300 }}>
 
