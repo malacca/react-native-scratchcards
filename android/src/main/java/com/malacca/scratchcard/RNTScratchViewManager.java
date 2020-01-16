@@ -12,8 +12,8 @@ import com.facebook.react.uimanager.ReactStylesDiffMap;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
-public class RNTScratchViewManager extends SimpleViewManager<ScratchView> {
-    public static final String EVENT_NAME = "onScratchEvent";
+class RNTScratchViewManager extends SimpleViewManager<ScratchView> {
+    static final String EVENT_NAME = "onScratchEvent";
 
     @Override
     public @NonNull String getName() {

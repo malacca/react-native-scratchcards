@@ -30,7 +30,7 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
 
-public class ScratchView extends View implements View.OnTouchListener {
+class ScratchView extends View implements View.OnTouchListener {
     private ThemedReactContext rnContext;
     private RCTEventEmitter mEventEmitter;
 
